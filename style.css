@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 body {
+    margin: 0;
     background-color: rgba(1, 76, 151, 0.907);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -14,25 +16,52 @@ header {
     border-radius: 5px;
 }
 
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
 .menu-lateral {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-evenly;
+    gap: 20px;
     width: 150px;
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 20px;
+    border-radius: 8px;
 }
 
 .menu-lateral a {
-    color: blue;
+    background-color: aliceblue;
+    text-align: center;
+    color: rgb(1, 1, 30);
     text-decoration: none;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .menu-lateral a:hover {
     background-color: gray;
+}
+
+.conteudo {
+    flex: 1;
+   padding: 40px;
+}
+
+.conteudo h1 {
+    font-size: 50px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.conteudo p {
+    font-size: 30px;
+    color: aliceblue;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
