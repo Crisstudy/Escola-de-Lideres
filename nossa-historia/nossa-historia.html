@@ -6,48 +6,84 @@
     <title>Nossa História</title>
     <link rel="shortcut icon" href="imagem/favicon-16x16.png" type="image/x-icon">
     <style>
+
+* {
+
+}
+
+
 body {
     background-color: rgba(1, 76, 151, 0.907);
     margin: 0;
     color: aliceblue;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 500vh;
+.historia-container {
+    background-color: #0c1c33;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.image-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 250px;
+
+}
+
+.image-left img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .texto {
     flex: 1;
-    margin-left: 30px;
-    background-color: rgba(0, 0, 0, 0.751);
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 10px;
-    padding: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: justify;
 }
 
-.imagem {
-    flex: 1;
-    justify-content: end;
-    width: 100%;
-    height: 300px;
-    margin: 10px;
-    padding: auto;
+.texto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 
+.image-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 250px;
+}
+
+.image-right img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* Responsivo: se a tela for pequena, as imagens mudam de posição */
+@media (max-width: 768px) {
+  .image-left,
+  .image-right {
+    position: static;
+    max-width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
 }
 
     </style>
 </head>
 <body>
     
-    <div class="container">
-        <div class="imagem">
-            <img src="imagem/IMG-mant-palmas_9334.webp" alt="Mant Brasil">
+    <div class="historia-container">
+        <div class="image-left">
+            <img src="imagem/IMG-mant-palmas_9334.webp" alt="MantBrasil">
         </div>
+            
         <div class="texto">
             <h1>HISTÓRIA DO MINISTÉRIO</h1>
             <p>
@@ -55,9 +91,7 @@ body {
             para a região norte de Goiás em 1986. Foi enviado a cidade de Paraíso do Norte pela Igreja de
             Cristo Ministério Nova Terra com Sede em Pires do Rio – GO, onde se converteu e recebeu seu
             chamado para a obra do Senhor, foi para o seminário em Goiânia – GO e recebeu a ordenação ao
-            pastorado.</p>
-            <p>
-            A indicação do então, Pastor Bené para esse novo trabalho veio como uma grande benção
+            pastorado. <br> A indicação do então, Pastor Bené para esse novo trabalho veio como uma grande benção
             para sua vida, pois ainda tão jovem e empreendedor já havia antes da ordenação ao pastorado
             aberto sua primeira igreja em Urutaí-GO começando ali seu chamado de sucesso no qual se
             transformaria em um grande fundador de igrejas (profeticamente ganhando vidas para Jesus que
@@ -66,17 +100,14 @@ body {
             Aquela reunião de ministério para seu envio foi marcada por grandes promessas vindas
             profeticamente para a nova região que se estabelecia naqueles dias. Já em Paraíso do Norte, uma
             família vinda de Pires do Rio e fazia reuniões familiares e que receberia o jovem pastor. Um mês
-            depois, o ministério enviou o Pastor Donizete para o auxiliá-lo.
-            </p>
-            <p>
+            depois, o ministério enviou o Pastor Donizete para o auxiliá-lo. <br>
             O início da igreja se deu em um espaço cedido na casa do irmão Frazilli, realizando
             reuniões de célula e rapidamente Deus começou a confirmar as promessas feitas e ouve a
             necessidade de se reunir em outro local e então começaram a reunir no clube de lazer da cidade e
             em pátios de escolas. Posteriormente adquiriram um espaço na rádio (AM Primavera) da cidade e
             se tornaram muito conhecidos pela qualidade, capacidade e unção que contagiou a cidade de
             Paraíso com a abertura da obra ali. Rapidamente cresceram e adquiriram um terreno e construíram
-            o primeiro templo para 500 pessoas.
-            </p>
+            o primeiro templo para 500 pessoas.</p>
             <p>
             Com a igreja em pleno desenvolvimento e crescimento na obra do Senhor houve a
             necessidade de treinar novos líderes para atuar no ministério. Assim, pela visão que o Senhor deu
@@ -158,8 +189,10 @@ body {
             apóstolos alcançaremos este propósito e veremos a glória de Deus sobre este ministério que nasceu
             para ganhar, consolidar, discipular e enviar.
             </p>
-            <img src="imagem/WhatsApp Image 2025-05-05 at 16.44.33.jpeg" alt="">
         </div>
-    </div>
+        <div class="image-right">
+            <img src="imagem/WhatsApp Image 2025-05-08 at 10.13.56.jpeg" alt="">
+        </div>
+        </div>
 </body>
 </html>
