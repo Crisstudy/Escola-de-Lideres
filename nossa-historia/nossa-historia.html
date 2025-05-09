@@ -13,76 +13,80 @@
 
 
 body {
-    background-color: rgba(1, 76, 151, 0.907);
+    background-color: rgba(1, 76, 151, 0.907);;
     margin: 0;
     color: aliceblue;
 }
 
-.historia-container {
-    background-color: #0c1c33;
-    color: white;
+.container {
+    max-width: 100%;
+    margin: 20px;
+    overflow: auto;
+    background-color: #0c1c33; 
     padding: 20px;
-    position: relative;
 }
 
-.image-left {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 250px;
-
-}
-
-.image-left img {
-    width: 100%;
-    border-radius: 10px;
-}
+.image-left { 
+     float: left; 
+     margin: 10px 20px 10px 0;
+     max-width: 40%; 
+     height: auto; 
+ } 
 
 .texto {
-    flex: 1;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: justify;
+    margin-bottom: 20px;
+    padding: 20px;
+
 }
 
 .texto h2 {
-    font-size: 2em;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.image-right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  max-width: 250px;
+.texto p {
+    line-height: 1.6;
 }
 
-.image-right img {
-  width: 100%;
-  border-radius: 10px;
+.text-2 {
+    margin-top: 40px;
+    padding-top: 20px;
 }
 
-
-/* Responsivo: se a tela for pequena, as imagens mudam de posição */
-@media (max-width: 768px) {
-  .image-left,
-  .image-right {
-    position: static;
-    max-width: 100%;
-    margin: 10px auto;
+.text-2 h3 {
     text-align: center;
-  }
+    margin-bottom: 20px;
+}
+
+.text-2 p {
+    line-height: 1.6;
+}
+
+.image-right {
+    float: right;
+    margin: 10px 0 10px 20px;
+    max-width: 40%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .image-left,
+    .image-right {
+        float: none;
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        max-width: 80%;
+    }
 }
 
     </style>
 </head>
 <body>
     
-    <div class="historia-container">
-        <div class="image-left">
-            <img src="imagem/IMG-mant-palmas_9334.webp" alt="MantBrasil">
-        </div>
+    <div class="container">
+        <img class="image-left" src="imagem/IMG-mant-palmas_9334.webp" alt="Igreja sede">
+       
             
         <div class="texto">
             <h1>HISTÓRIA DO MINISTÉRIO</h1>
@@ -189,10 +193,14 @@ body {
             apóstolos alcançaremos este propósito e veremos a glória de Deus sobre este ministério que nasceu
             para ganhar, consolidar, discipular e enviar.
             </p>
+            
         </div>
-        <div class="image-right">
-            <img src="imagem/WhatsApp Image 2025-05-08 at 10.13.56.jpeg" alt="">
-        </div>
-        </div>
+        <img class="image-right" src="imagem/WhatsApp Image 2025-05-08 at 10.13.56.jpeg" alt="Igreja Anápolis">
+            <div class="text-2">
+                <h3>História MANT-ANÁPOLIS</h3>
+                <p>A igreja de Cristo MANT-ANÁPOLIS surgiu justamente com o cumprimento desse IDE, quando os pastores Vilmar e Cristina vinheram para a cidade de Anápolis e começaram uma pequena célula em sua casa no ano de 2005, mas precisamente no mês de Junho, praticando os aprendizados da visão celular de ganhar, consolidar e enviar, pregaram a palavra de Deus que alcancou os corações das primeiras almas, o primeiro encotro foi realizado começando assim o processo de consolidação dos novos discipulos de Jesus, que em seguida começaram a escola de líderes, se formaram e hoje muitos deles são pastores e evangelistas do ministério, células se multiplicaram e com o crescimento das mesmas, ocasionaram sob a palavra de Deus lançada pelo o Apóstolo Bené Silva (Lider geral do MANT) que consta no livro do profeta Zacarias 4:6 "Não por força, nem por violência, mas pelo meu Espirito, diz o SENHOR dos exércitos." o templo da igreja foi inaugurado, e aquilo que começou como uma pequena célula se tornou uma igreja, que atualmente tem sua sede sendo construida na cidade como consta na foto ao lado direito do texto. </p>
+                <p>Essa mesma escola de líderes continua formando discipulos na cidade, tornando-os aptos para a liderança de células e destacando os vocacionados para o chamado em trabalhar no reino de Deus! </p>   
+            </div>
+    </div>
 </body>
 </html>
