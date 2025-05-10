@@ -2,17 +2,22 @@
 
 body {
     margin: 0;
+    padding: 0;
     background-color: rgba(1, 76, 151, 0.907);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     background-image: url("imagem/IMG_140943958107284.jpeg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    padding-top: 50px;
+}
+header img {
+
 }
 
 .container {
@@ -53,7 +58,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     gap: 80px;
-    width: 15%;
+    width: 200px;
     height: 100vh;
     margin-top: 50px;
     padding: 20px;
@@ -100,7 +105,8 @@ header {
     align-items: flex-start;
     background-color: rgb(1, 1, 30);
     color: white;
-    margin-left: 30px;
+    /* margin-left: 30px;
+    margin-right: 20px; */
     padding: 40px 20px;
     flex-wrap: wrap;
   }
@@ -108,7 +114,7 @@ header {
   .footer-col {
     flex: 1;
     min-width: 220px;
-    margin: 10px;
+    margin: 30px;
   }
   
   .footer-col h3 {
@@ -146,16 +152,130 @@ header {
   .social-icons a img:hover {
     transform: scale(1.2);
   }
+
+  /* Para telas médias e pequenas */
+@media (max-width: 1024px) {
+  header {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .conteudo {
+    margin-left: 0;
+    padding: 40px;
+  }
+
+  .menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 70%;
+    max-width: 250px;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 60px;
+    border-radius: 0;
+    transition: left 0.3s ease;
+  }
+
+  .menu-lateral.ativo {
+    left: 0;
+  }
+
+  #menu-btn {
+    z-index: 1101;
+  }
+
+  header {
+    height: 60vh;
+  }
+}
   
+/*  Para telas menores */
   @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
     header {
-      height: 60vh;
+      background-position: top;
+      height: 30vh;
+      padding-top: 60px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .conteudo {
+      margin-left: 30px;
+      padding-top: 10px;
+      padding: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .conteudo h1 {
+      font-size: 1.8em;
+    }
+
+    .conteudo p {
+      font-size: 1.2em;
+    }
+
+    .menu-lateral {
+      position: fixed;
+      width: 70%;
+      max-width: 250px;
+      height: 100%;
+      top: 0;
+      left: -260px;
+      margin-top: 0;
+      padding: 20px;
+      border-radius: 0;
+      z-index: 1000;
+    }
+
+    .menu-lateral.ativo {
+      left: 0;
+    }
+
+    #menu-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 1.5rem;
     }
   }
   
-  @media (max-width: 480px) {
-    header {
-      height: 50vh;
-    }
+  /*  Para celulares */
+ @media (max-width: 600px) {
+  .conteudo h1 {
+    font-size: 1.5em;
+    text-align: center;
   }
+
+  .conteudo p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin: 20px 0;
+  }
+ }
+
+ 
   

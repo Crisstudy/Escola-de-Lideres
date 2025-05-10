@@ -26,6 +26,65 @@ body {
     padding: 20px;
 }
 
+.container-menu {
+    display: flex;
+    min-height: 100vh;
+}
+
+#menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background: rgba(2, 2, 153, 0.918);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 50px;
+    left: -220px;
+    width: 200px;
+    height: calc(100vh - 50px);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-lateral.ativo {
+    left: 0;
+}
+
+.menu-lateral {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 80px;
+    width: 200px;
+    height: 100vh;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.menu-lateral a {
+    background-color: aliceblue;
+    text-align: center;
+    color: rgb(1, 1, 30);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: gray;
+}
+
+
 .image-left { 
      float: left; 
      margin: 10px 20px 10px 0;
@@ -83,124 +142,148 @@ body {
     </style>
 </head>
 <body>
-    
-    <div class="container">
-        <img class="image-left" src="imagem/IMG-mant-palmas_9334.webp" alt="Igreja sede">
-       
-            
-        <div class="texto">
-            <h1>HISTÓRIA DO MINISTÉRIO</h1>
-            <p>
-            A Igreja de Cristo região Norte teve início a partir do chamado do Apóstolo Bené Silva
-            para a região norte de Goiás em 1986. Foi enviado a cidade de Paraíso do Norte pela Igreja de
-            Cristo Ministério Nova Terra com Sede em Pires do Rio – GO, onde se converteu e recebeu seu
-            chamado para a obra do Senhor, foi para o seminário em Goiânia – GO e recebeu a ordenação ao
-            pastorado. <br> A indicação do então, Pastor Bené para esse novo trabalho veio como uma grande benção
-            para sua vida, pois ainda tão jovem e empreendedor já havia antes da ordenação ao pastorado
-            aberto sua primeira igreja em Urutaí-GO começando ali seu chamado de sucesso no qual se
-            transformaria em um grande fundador de igrejas (profeticamente ganhando vidas para Jesus que
-            nos dias de hoje se tornaram grandes líderes conhecidos pelo Brasil com o Bispo Sérgio). Com
-            então um mês de ordenado ao pastorado e sendo ainda solteiro foi enviado para Paraíso do Norte.
-            Aquela reunião de ministério para seu envio foi marcada por grandes promessas vindas
-            profeticamente para a nova região que se estabelecia naqueles dias. Já em Paraíso do Norte, uma
-            família vinda de Pires do Rio e fazia reuniões familiares e que receberia o jovem pastor. Um mês
-            depois, o ministério enviou o Pastor Donizete para o auxiliá-lo. <br>
-            O início da igreja se deu em um espaço cedido na casa do irmão Frazilli, realizando
-            reuniões de célula e rapidamente Deus começou a confirmar as promessas feitas e ouve a
-            necessidade de se reunir em outro local e então começaram a reunir no clube de lazer da cidade e
-            em pátios de escolas. Posteriormente adquiriram um espaço na rádio (AM Primavera) da cidade e
-            se tornaram muito conhecidos pela qualidade, capacidade e unção que contagiou a cidade de
-            Paraíso com a abertura da obra ali. Rapidamente cresceram e adquiriram um terreno e construíram
-            o primeiro templo para 500 pessoas.</p>
-            <p>
-            Com a igreja em pleno desenvolvimento e crescimento na obra do Senhor houve a
-            necessidade de treinar novos líderes para atuar no ministério. Assim, pela visão que o Senhor deu
-            ao pastor Bené que não se limitava a igreja local iniciou-se o que seria então uma grande região
-            de igrejas e pastores na região norte com a abertura da igreja de Barrolândia e Gurupi.
-            Em 1990 ouve um divisor de águas em seu ministério seu casamento com a Pastora
-            Veralúcia de São Miguel do Araguaia – GO, uma mulher de visão e muita unção no qual seria
-            apartir dali uma grande companheira no ministério e que faria diferença entre as mulheres de seu
-            tempo, formando uma linda família apostólica juntamente com seus filhos, Matheus e Haddassa. <br>
-            Com a criação do Estado do Tocantins e a confirmação da construção de Palmas distante
-            de Paraíso somente 60 km, iniciaram o propósito de abrir uma grande obra nesta capital que seria
-            construída transformando completamente toda a região norte. Debaixo de jejuns, orações e
-            palavras proféticas estabeleceram o propósito de reunirem com o então governador do Estado para
-            pleitear um lote para a futura sede não conseguindo de imediato, mas como era propósito de Deus
-            a vitória veio com o segundo governador que, gentilmente cedeu uma área institucional, própria
-            para culto em uma região estratégica da cidade onde posteriormente seria erguida uma linda igreja
-            sendo a sede do ministério hoje.
-            </p>
-            <p>
-            Em 1993, o pastor Bené foi enviado a Palmas, juntamente com uma equipe de obreiros
-            com o propósito de levantar uma obra ao Senhor. Como nossos Pastores Bené e Veralúcia não
-            tinham receio de recomeçar, iniciaram as reuniões em salas emprestadas, escolas. Em um dia
-            desses de clamor estando nosso pastor Bené em jejum e oração no monte com seus obreiros em
-            um lugar pouco visitado por pessoas tanto pela dificuldade de acesso daquele local de oração,
-            clamando ao Senhor por respostas, nosso Pastor Bené encontra no meio do cerrado um chaveiro
-            ainda sujo, mas que continha um grande refrigério, pois nele estava escrito “O CHORO PODE
-            DURAR UMA NOITE, MAS A ALEGRIA VEM PELA MANHÃ”. Confortados pela palavra de
-            Deus desceram daquele monte sonhando e imediatamente se abriu uma porta para alugar o
-            primeiro salão e então começar os trabalhos da igreja. Não diferentemente de Paraíso a obra se
-            expandiu e mesmo no meio de dificuldades e lutas com o desbravamento da nova capital nossos
-            pastores firmados na promessa oravam e clamavam pelo milagre que certamente viria. Para a
-            construção da Igreja daquela que seria uma referencia para Palmas de construção, respeito e
-            autoridade – a Igreja de Cristo de Palmas aconteceu com o trabalho destes pastores arrojados.
-            Com a estrutura veio também o crescimento e automaticamente a necessidade de
-            investimento em novos obreiros e líderes, foram trazidos seminaristas para cumprir seu ano prático
-            em Palmas e enviados novos jovens sonhadores e desejosos pelo chamado do ministério para
-            serem treinados expandindo o a região como a abertura de novas igrejas como Dianópolis, Guaraí,
-            Porto Nacional e Araguaína.
-            </p>
-            <p>
-            Em 1996 em uma reunião ministerial da região de Pires do Rio foi-se então colocada a
-            necessidade de se ter um ministério estruturado e a partir de então as igrejas de Cristo que estavam
-            ali reunidas tornaram um ministério ligados em amor e respeito pelo Bispo Ulisses de Oliveira
-            passando a se chamar desde então Igreja de Cristo Ministério Nova Terra, havendo então a unção
-            de Bispos no qual um desses homens preparando para a liderança estava nosso Pastor Bené que
-            agora recebera a unção de Bispo. Já em 1999 o Bispo Bené através do Bispo Vicente Mesquita
-            conheceu a Visão Celular no modelo dos 12 e se tornaria para o ministério uma explosão de
-            crescimento e unção para a igreja. <br>
-            No mesmo período nosso Bispo Bené assumiu o cargo de Bispo Geral do Ministério Nova
-            Terra, passando a acompanhar todas as igrejas do Brasil.
-            No outro ano depois da entrega do cargo de Bispo Geral houve a solicitação de sua
-            autonomia e a benção do ministério para trabalhar com a visão celular.
-            Ao lado de grande líderes e fieis homens de Deus, o Ministério tomou proporções
-            grandiosas e se tornou uma referencia para as demais igrejas de Cristo no Brasil, reconhecendo a
-            unção que estava sobre nosso Bispo Bené e Bispa Vera. Então surgiram novas igrejas debaixo de
-            sua cobertura saindo do âmbito de estado do Tocantins para outros estados da federação.
-            Dado o crescimento da obra surgiu a necessidade de ordenação de novos evangelistas,
-            pastores e de novos bispos para a organização do ministério, assim anualmente em um grande
-            congresso profético o ministério se reuni para profetizar e derramar a unção sobre estes novos
-            líderes.
-            </p>
-            <p>
-            Nosso Bispo Bené e Bispa Vera reconhecidamente apóstolos da igreja destes dias,
-            receberam esta unção através do Apóstolo Renê Terra Nova de Manaus, por ter a sua liderança
-            consolidada e um ministério em pleno desenvolvimento e crescimento nascendo assim o
-            Ministério Apostólico.
-            Com esta organização espiritual ouve a necessidade de se organizar administrativamente e
-            em uma reunião de ministério que acontece a cada 2 meses em Palmas, juntamente com o conselho
-            apostólico e os pastores e líderes do Ministério nasceu o Ministério Apostólico nova Terra com o
-            visão de alcançar todos os Estados do Brasil e exterior para Cristo.
-            Estamos vivendo como os que sonham, o ministério esta crescendo a passos largos, com
-            organização, unção e promessa de Deus, temos apóstolos, bispos, pastores, evangelistas e líderes
-            de células que tem amado o evangelho e vivido para adorar e cumprir o chamado do Ide de Jesus.
-            Um dos pontos chaves do Ministério Apostólico Nova Terra foi o encontro que nossos
-            apóstolos tiveram com a visão de ascender a Terra Santa (Jerusalém), a Igreja tem entrado neste
-            mover tremendo e isto tem trazido grande alegria e prosperidade à aqueles que amam Jerusalém e
-            oram pela paz.
-            Conquistar as nações é só uma questão de tempo, pois debaixo da visão e unção de nossos
-            apóstolos alcançaremos este propósito e veremos a glória de Deus sobre este ministério que nasceu
-            para ganhar, consolidar, discipular e enviar.
-            </p>
-            
-        </div>
-        <img class="image-right" src="imagem/WhatsApp Image 2025-05-08 at 10.13.56.jpeg" alt="Igreja Anápolis">
-            <div class="text-2">
-                <h3>História MANT-ANÁPOLIS</h3>
-                <p>A igreja de Cristo MANT-ANÁPOLIS surgiu justamente com o cumprimento desse IDE, quando os pastores Vilmar e Cristina vinheram para a cidade de Anápolis e começaram uma pequena célula em sua casa no ano de 2005, mas precisamente no mês de Junho, praticando os aprendizados da visão celular de ganhar, consolidar e enviar, pregaram a palavra de Deus que alcancou os corações das primeiras almas, o primeiro encotro foi realizado começando assim o processo de consolidação dos novos discipulos de Jesus, que em seguida começaram a escola de líderes, se formaram e hoje muitos deles são pastores e evangelistas do ministério, células se multiplicaram e com o crescimento das mesmas, ocasionaram sob a palavra de Deus lançada pelo o Apóstolo Bené Silva (Lider geral do MANT) que consta no livro do profeta Zacarias 4:6 "Não por força, nem por violência, mas pelo meu Espirito, diz o SENHOR dos exércitos." o templo da igreja foi inaugurado, e aquilo que começou como uma pequena célula se tornou uma igreja, que atualmente tem sua sede sendo construida na cidade como consta na foto ao lado direito do texto. </p>
-                <p>Essa mesma escola de líderes continua formando discipulos na cidade, tornando-os aptos para a liderança de células e destacando os vocacionados para o chamado em trabalhar no reino de Deus! </p>   
-            </div>
+    <div class="container-menu">
+        <button id="menu-btn">☰</button>
+        <div class="menu-lateral">
+          <a href="../index.html">PÁGINA PRINCIPAL</a>
+          <a href="pagina-modulos/modulos.html">MÓDULOS</a>
+          <a href="Aulas/aulas.html">AULAS</a>
+          <a href="provas/provas.html">PROVAS</a>
+          <a href="#">NOTAS</a>
     </div>
+        <div class="container">
+            <img class="image-left" src="imagem/IMG-mant-palmas_9334.webp" alt="Igreja sede">
+    
+        
+        
+            <div class="texto">
+                <h1>HISTÓRIA DO MINISTÉRIO</h1>
+                <p>
+                A Igreja de Cristo região Norte teve início a partir do chamado do Apóstolo Bené Silva
+                para a região norte de Goiás em 1986. Foi enviado a cidade de Paraíso do Norte pela Igreja de
+                Cristo Ministério Nova Terra com Sede em Pires do Rio – GO, onde se converteu e recebeu seu
+                chamado para a obra do Senhor, foi para o seminário em Goiânia – GO e recebeu a ordenação ao
+                pastorado. <br> A indicação do então, Pastor Bené para esse novo trabalho veio como uma grande benção
+                para sua vida, pois ainda tão jovem e empreendedor já havia antes da ordenação ao pastorado
+                aberto sua primeira igreja em Urutaí-GO começando ali seu chamado de sucesso no qual se
+                transformaria em um grande fundador de igrejas (profeticamente ganhando vidas para Jesus que
+                nos dias de hoje se tornaram grandes líderes conhecidos pelo Brasil com o Bispo Sérgio). Com
+                então um mês de ordenado ao pastorado e sendo ainda solteiro foi enviado para Paraíso do Norte.
+                Aquela reunião de ministério para seu envio foi marcada por grandes promessas vindas
+                profeticamente para a nova região que se estabelecia naqueles dias. Já em Paraíso do Norte, uma
+                família vinda de Pires do Rio e fazia reuniões familiares e que receberia o jovem pastor. Um mês
+                depois, o ministério enviou o Pastor Donizete para o auxiliá-lo. <br>
+                O início da igreja se deu em um espaço cedido na casa do irmão Frazilli, realizando
+                reuniões de célula e rapidamente Deus começou a confirmar as promessas feitas e ouve a
+                necessidade de se reunir em outro local e então começaram a reunir no clube de lazer da cidade e
+                em pátios de escolas. Posteriormente adquiriram um espaço na rádio (AM Primavera) da cidade e
+                se tornaram muito conhecidos pela qualidade, capacidade e unção que contagiou a cidade de
+                Paraíso com a abertura da obra ali. Rapidamente cresceram e adquiriram um terreno e construíram
+                o primeiro templo para 500 pessoas.</p>
+                <p>
+                Com a igreja em pleno desenvolvimento e crescimento na obra do Senhor houve a
+                necessidade de treinar novos líderes para atuar no ministério. Assim, pela visão que o Senhor deu
+                ao pastor Bené que não se limitava a igreja local iniciou-se o que seria então uma grande região
+                de igrejas e pastores na região norte com a abertura da igreja de Barrolândia e Gurupi.
+                Em 1990 ouve um divisor de águas em seu ministério seu casamento com a Pastora
+                Veralúcia de São Miguel do Araguaia – GO, uma mulher de visão e muita unção no qual seria
+                apartir dali uma grande companheira no ministério e que faria diferença entre as mulheres de seu
+                tempo, formando uma linda família apostólica juntamente com seus filhos, Matheus e Haddassa. <br>
+                Com a criação do Estado do Tocantins e a confirmação da construção de Palmas distante
+                de Paraíso somente 60 km, iniciaram o propósito de abrir uma grande obra nesta capital que seria
+                construída transformando completamente toda a região norte. Debaixo de jejuns, orações e
+                palavras proféticas estabeleceram o propósito de reunirem com o então governador do Estado para
+                pleitear um lote para a futura sede não conseguindo de imediato, mas como era propósito de Deus
+                a vitória veio com o segundo governador que, gentilmente cedeu uma área institucional, própria
+                para culto em uma região estratégica da cidade onde posteriormente seria erguida uma linda igreja
+                sendo a sede do ministério hoje.
+                </p>
+                <p>
+                Em 1993, o pastor Bené foi enviado a Palmas, juntamente com uma equipe de obreiros
+                com o propósito de levantar uma obra ao Senhor. Como nossos Pastores Bené e Veralúcia não
+                tinham receio de recomeçar, iniciaram as reuniões em salas emprestadas, escolas. Em um dia
+                desses de clamor estando nosso pastor Bené em jejum e oração no monte com seus obreiros em
+                um lugar pouco visitado por pessoas tanto pela dificuldade de acesso daquele local de oração,
+                clamando ao Senhor por respostas, nosso Pastor Bené encontra no meio do cerrado um chaveiro
+                ainda sujo, mas que continha um grande refrigério, pois nele estava escrito “O CHORO PODE
+                DURAR UMA NOITE, MAS A ALEGRIA VEM PELA MANHÃ”. Confortados pela palavra de
+                Deus desceram daquele monte sonhando e imediatamente se abriu uma porta para alugar o
+                primeiro salão e então começar os trabalhos da igreja. Não diferentemente de Paraíso a obra se
+                expandiu e mesmo no meio de dificuldades e lutas com o desbravamento da nova capital nossos
+                pastores firmados na promessa oravam e clamavam pelo milagre que certamente viria. Para a
+                construção da Igreja daquela que seria uma referencia para Palmas de construção, respeito e
+                autoridade – a Igreja de Cristo de Palmas aconteceu com o trabalho destes pastores arrojados.
+                Com a estrutura veio também o crescimento e automaticamente a necessidade de
+                investimento em novos obreiros e líderes, foram trazidos seminaristas para cumprir seu ano prático
+                em Palmas e enviados novos jovens sonhadores e desejosos pelo chamado do ministério para
+                serem treinados expandindo o a região como a abertura de novas igrejas como Dianópolis, Guaraí,
+                Porto Nacional e Araguaína.
+                </p>
+                <p>
+                Em 1996 em uma reunião ministerial da região de Pires do Rio foi-se então colocada a
+                necessidade de se ter um ministério estruturado e a partir de então as igrejas de Cristo que estavam
+                ali reunidas tornaram um ministério ligados em amor e respeito pelo Bispo Ulisses de Oliveira
+                passando a se chamar desde então Igreja de Cristo Ministério Nova Terra, havendo então a unção
+                de Bispos no qual um desses homens preparando para a liderança estava nosso Pastor Bené que
+                agora recebera a unção de Bispo. Já em 1999 o Bispo Bené através do Bispo Vicente Mesquita
+                conheceu a Visão Celular no modelo dos 12 e se tornaria para o ministério uma explosão de
+                crescimento e unção para a igreja. <br>
+                No mesmo período nosso Bispo Bené assumiu o cargo de Bispo Geral do Ministério Nova
+                Terra, passando a acompanhar todas as igrejas do Brasil.
+                No outro ano depois da entrega do cargo de Bispo Geral houve a solicitação de sua
+                autonomia e a benção do ministério para trabalhar com a visão celular.
+                Ao lado de grande líderes e fieis homens de Deus, o Ministério tomou proporções
+                grandiosas e se tornou uma referencia para as demais igrejas de Cristo no Brasil, reconhecendo a
+                unção que estava sobre nosso Bispo Bené e Bispa Vera. Então surgiram novas igrejas debaixo de
+                sua cobertura saindo do âmbito de estado do Tocantins para outros estados da federação.
+                Dado o crescimento da obra surgiu a necessidade de ordenação de novos evangelistas,
+                pastores e de novos bispos para a organização do ministério, assim anualmente em um grande
+                congresso profético o ministério se reuni para profetizar e derramar a unção sobre estes novos
+                líderes.
+                </p>
+                <p>
+                Nosso Bispo Bené e Bispa Vera reconhecidamente apóstolos da igreja destes dias,
+                receberam esta unção através do Apóstolo Renê Terra Nova de Manaus, por ter a sua liderança
+                consolidada e um ministério em pleno desenvolvimento e crescimento nascendo assim o
+                Ministério Apostólico.
+                Com esta organização espiritual ouve a necessidade de se organizar administrativamente e
+                em uma reunião de ministério que acontece a cada 2 meses em Palmas, juntamente com o conselho
+                apostólico e os pastores e líderes do Ministério nasceu o Ministério Apostólico nova Terra com o
+                visão de alcançar todos os Estados do Brasil e exterior para Cristo.
+                Estamos vivendo como os que sonham, o ministério esta crescendo a passos largos, com
+                organização, unção e promessa de Deus, temos apóstolos, bispos, pastores, evangelistas e líderes
+                de células que tem amado o evangelho e vivido para adorar e cumprir o chamado do Ide de Jesus.
+                Um dos pontos chaves do Ministério Apostólico Nova Terra foi o encontro que nossos
+                apóstolos tiveram com a visão de ascender a Terra Santa (Jerusalém), a Igreja tem entrado neste
+                mover tremendo e isto tem trazido grande alegria e prosperidade à aqueles que amam Jerusalém e
+                oram pela paz.
+                Conquistar as nações é só uma questão de tempo, pois debaixo da visão e unção de nossos
+                apóstolos alcançaremos este propósito e veremos a glória de Deus sobre este ministério que nasceu
+                para ganhar, consolidar, discipular e enviar.
+                </p>
+        
+            </div>
+            <img class="image-right" src="imagem/WhatsApp Image 2025-05-08 at 10.13.56.jpeg" alt="Igreja Anápolis">
+                <div class="text-2">
+                    <h3>História MANT-ANÁPOLIS</h3>
+                    <p>A igreja de Cristo MANT-ANÁPOLIS surgiu justamente com o cumprimento desse IDE, quando os pastores Vilmar e Cristina vinheram para a cidade de Anápolis e começaram uma pequena célula em sua casa no ano de 2005, mas precisamente no mês de Junho, praticando os aprendizados da visão celular de ganhar, consolidar e enviar, pregaram a palavra de Deus que alcancou os corações das primeiras almas, o primeiro encotro foi realizado começando assim o processo de consolidação dos novos discipulos de Jesus, que em seguida começaram a escola de líderes, se formaram e hoje muitos deles são pastores e evangelistas do ministério, células se multiplicaram e com o crescimento das mesmas, ocasionaram sob a palavra de Deus lançada pelo o Apóstolo Bené Silva (Lider geral do MANT) que consta no livro do profeta Zacarias 4:6 "Não por força, nem por violência, mas pelo meu Espirito, diz o SENHOR dos exércitos." o templo da igreja foi inaugurado, e aquilo que começou como uma pequena célula se tornou uma igreja, que atualmente tem sua sede sendo construida na cidade como consta na foto ao lado direito do texto. </p>
+                    <p>Essa mesma escola de líderes continua formando discipulos na cidade, tornando-os aptos para a liderança de células e destacando os vocacionados para o chamado em trabalhar no reino de Deus! </p>
+                </div>
+            </div>
+    <script>
+        const btn = document.getElementById('menu-btn');
+const menu = document.querySelector('.menu-lateral');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('ativo');
+
+        // Impede ou permite o scroll no body conforme o menu está ativo
+        if (menu.classList.contains('ativo')) {
+            document.body.style.overflow = 'hidden'; // trava o scroll
+        } else {
+            document.body.style.overflow = "auto"; // libera o scroll
+        }
+    });
+    </script>
 </body>
 </html>
