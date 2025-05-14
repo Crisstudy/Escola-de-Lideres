@@ -38,13 +38,21 @@ header img {
 }
 
 .menu-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
     top: 50px;
     left: -220px;
     width: 200px;
-    height: calc(100vh - 50px);
+    height: 100vh;
+    gap: 80px;
     transition: left 0.3s ease;
     z-index: 1000;
+    background-color: white;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .menu-lateral.ativo {
@@ -52,18 +60,6 @@ header img {
 }
 
 
-.menu-lateral {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 80px;
-    width: 200px;
-    height: 100vh;
-    margin-top: 50px;
-    padding: 20px;
-    border-radius: 8px;
-}
 
 .menu-lateral a {
     background-color: aliceblue;

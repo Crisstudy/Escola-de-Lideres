@@ -57,9 +57,6 @@ body {
     left: 0;
 }
 
-.menu-lateral {
-    
-}
 
 .menu-lateral a {
     background-color: aliceblue;
@@ -375,12 +372,12 @@ body {
         btn.addEventListener('click', () => {
         menu.classList.toggle('ativo');
 
-        // Impede ou permite o scroll no body conforme o menu está ativo
-        if (menu.classList.contains('ativo')) {
-            document.body.style.overflow = 'hidden'; // trava o scroll
-        } else {
-            document.body.style.overflow = "auto"; // libera o scroll
-        }
+        // // Impede ou permite o scroll no body conforme o menu está ativo
+        // if (menu.classList.contains('ativo')) {
+        //     document.body.style.overflow = 'hidden'; // trava o scroll
+        // } else {
+        //     document.body.style.overflow = "auto"; // libera o scroll
+        // }
     });
     </script>
 

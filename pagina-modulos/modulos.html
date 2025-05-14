@@ -6,10 +6,10 @@
     <title>MÓDULOS</title>
    <link rel="shortcut icon" href="imagem/favicon-16x16.png" type="image/x-icon">
     <style>
-    body {
-        margin: 0;
-        background-color: rgba(1, 76, 151, 0.907);
-    }
+body {
+    margin: 0;
+    background-color: rgba(1, 76, 151, 0.907);
+}
 
     .container-menu {
     display: flex;
@@ -68,19 +68,19 @@
     .container {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 100vh;   
     }
 
-    .texto  {
-        display: block;
+     .texto  {
+        flex: 1;
         background-color: rgba(0, 0, 0, 0.751);
         color: white;
         font-family: 'Times New Roman', Times, serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin: 10px auto;
+        margin: 10px;
         padding: 20px;
-        max-width: 99%;
-        box-sizing: border-box;
+        max-width: 90%;
+        border-radius: 10px;
     }
     
     .texto h1 {
@@ -95,6 +95,7 @@
         text-align: justify;
         margin: 20px;
         line-height: 1.6;
+        margin-bottom: 10px;
     }
 
     .signal {
@@ -192,6 +193,92 @@
   .social-icons a img:hover {
     transform: scale(1.2);
   }
+
+  /*  Para telas menores */
+  /* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+  .menu-lateral {
+    top: 0;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 60px;
+  }
+
+  .modulos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 0;
+  }
+
+  .footer-col {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .texto h1 {
+    font-size: 1.8rem;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .texto p {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .signal {
+    margin-right: 20px;
+    font-size: 0.9rem;
+  }
+
+  .modulo {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  #menu-btn {
+    font-size: 1.5rem;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-lateral {
+    width: 100%;
+    left: -100%;
+  }
+
+  .menu-lateral.ativo {
+    left: 0;
+  }
+
+  .modulo img {
+    height: auto;
+  }
+
+  .footer-col h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-col p, .footer-col ul {
+    font-size: 13px;
+  }
+
+  .texto {
+    max-width: 95%;
+    padding: 10px;
+  }
+}
+
 
     </style>
 </head>
@@ -310,12 +397,12 @@
         btn.addEventListener('click', () => {
         menu.classList.toggle('ativo');
 
-        // Impede ou permite o scroll no body conforme o menu está ativo
-        if (menu.classList.contains('ativo')) {
-            document.body.style.overflow = 'hidden'; // trava o scroll
-        } else {
-            document.body.style.overflow = "auto"; // libera o scroll
-        }
+        // // Impede ou permite o scroll no body conforme o menu está ativo
+        // if (menu.classList.contains('ativo')) {
+        //     document.body.style.overflow = 'hidden'; // trava o scroll
+        // } else {
+        //     document.body.style.overflow = "auto"; // libera o scroll
+        // }
     });
     </script>
 </body>
