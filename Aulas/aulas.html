@@ -21,18 +21,6 @@ header {
 }
 
 
-#menu-btn {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1100;
-    background: rgba(2, 2, 153, 0.918);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 .menu-lateral {
     display: flex;
     flex-direction: column;
@@ -50,6 +38,18 @@ header {
     gap: 80px;
     border-radius: 8px;
 } 
+
+#menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background: rgba(2, 2, 153, 0.918);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 .menu-lateral.ativo {
     left: 0;
@@ -256,9 +256,9 @@ main {
         <button id="menu-btn">☰</button>
         <div class="menu-lateral">
           <a href="../index.html">PÁGINA PRINCIPAL</a>
-          <a href="nossa-historia/nossa-historia.html">NOSSA HISTÓRIA</a>
-          <a href="#">MÓDULOS</a>
-          <a href="provas/provas.html">PROVAS</a>
+          <a href="../nossa-historia/nossa-historia.html">NOSSA HISTÓRIA</a>
+          <a href="../pagina-modulos/modulos.html">MÓDULOS</a>
+          <a href="../provas/provas.html">PROVAS E EXERCICÍOS</a>
           <a href="#">NOTAS</a>
     </div>
     <main>
@@ -371,7 +371,7 @@ main {
 </footer>
 
     <script>
-          const btn = document.getElementById('menu-btn');
+        const btn = document.getElementById('menu-btn');
         const menu = document.querySelector('.menu-lateral');
 
         btn.addEventListener('click', () => {

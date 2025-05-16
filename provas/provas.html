@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Provas</title>
+  <title>Provas e Exercicíos</title>
   <link rel="shortcut icon" href="imagem/favicon-16x16.png" type="image/x-icon">
   <style>
     body {
@@ -14,20 +14,82 @@
       padding: 20px;
     }
 
-    h1, h2 {
-      margin-bottom: 10px;
-    }
+    .menu-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 50px;
+    left: -220px;
+    width: 200px;
+    height: 100vh;
+    margin-top: 50px;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    background-color: white;
+    gap: 80px;
+    border-radius: 8px;
+} 
 
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: white;
-      color: #014c97;
-      border: none;
-      border-radius: 5px;
-    }
+#menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background: rgba(2, 2, 153, 0.918);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu-lateral.ativo {
+    left: 0;
+}
+
+.menu-lateral a {
+    background-color: aliceblue;
+    text-align: center;
+    color: rgb(1, 1, 30);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: gray;
+}
+
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+.prova {
+    width: 40%;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: white;
+    color: #014c97;
+    border: none;
+    border-radius: 5px;
+}
+
+.exe {
+    width: 20%;
+    margin: 10px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #014c97;
+    color: white;
+    border-radius: 5px;
+}
 
     iframe {
       margin-top: 30px;
@@ -38,6 +100,8 @@
       display: none;
     }
 
+
+
     .footer {
     width: 100vw;
     display: flex; 
@@ -45,8 +109,7 @@
     align-items: flex-start;
     background-color: rgb(1, 1, 30);
     color: white;
-    margin-left: 30px; 
-    margin-right: 20px; 
+    margin-bottom: -10px;
     padding: 40px 20px;
     flex-wrap: wrap;
   }
@@ -54,7 +117,7 @@
   .footer-col {
     flex: 1;
     min-width: 220px;
-    margin: 40px;
+    margin: 0; 
   }
   
   .footer-col h3 {
@@ -92,21 +155,138 @@
   .social-icons a img:hover {
     transform: scale(1.2);
   }
+
+  @media (max-width: 1024px) {
+  .menu-lateral {
+    top: 0;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 60px;
+  }
+
+  .modulo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; 
+    margin-bottom: -30px;
+  }
+
+  .footer-col {
+    margin:  0;
+    text-align: center;
+  }
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    #menu-btn {
+    font-size: 1.5rem;
+    top: 5px;
+    left: 5px;
+  }
+
+  button.prova,
+  button.exe {
+    width: 90%;        /* ocupa quase toda a largura */
+    font-size: 18px;
+    padding: 14px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .menu-lateral {
+    width: 100%;
+    left: -100%;
+  }
+
+  .menu-lateral.ativo {
+    left: 0;
+  }
+
+  button.prova,
+  button.exe {
+    font-size: 16px;
+    padding: 12px;
+  }
+  
+  .footer {
+    margin: -30px;
+  }
+
+  .footer-col h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-col p, .footer-col ul {
+    font-size: 13px;
+  }
+
+}
+
   </style>
 </head>
 <body>
-  <h1>PROVAS ONLINE</h1>
-  <h2>Acesse sua prova</h2> 
+    <div class="container-menu">
+        <button id="menu-btn">☰</button>
+        <div class="menu-lateral">
+          <a href="../index.html">PÁGINA PRINCIPAL</a>
+          <a href="../nossa-historia/nossa-historia.html">NOSSA HISTÓRIA</a>
+          <a href="../pagina-modulos/modulos.html">MÓDULOS</a>
+          <a href="../Aulas/aulas.html">AULAS</a>
+          <a href="#">NOTAS</a>
+    </div>
+    
+      <h1>PROVAS ONLINE</h1>
+      <h2>Acesse sua prova</h2>
 
-  <button onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=H0tnWC4SC0-Yn6Hh2BkUAh9G4kWUbUJFtr9Ag8Xa3P5UQ1dJUUQ5Rjk3VEwwTE42VVdWQU05TjM1RC4u&embed=true')">
-    Prova 1 - Módulo A
-  </button>
+      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H0tnWC4SC0-Yn6Hh2BkUAh9G4kWUbUJFtr9Ag8Xa3P5UQ1dJUUQ5Rjk3VEwwTE42VVdWQU05TjM1RC4u" target="_blank">
+        <button class="prova">Prova 1 - Módulo I</button>
+      </a>
+      
+      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H0tnWC4SC0-Yn6Hh2BkUAh9G4kWUbUJFtr9Ag8Xa3P5UQ1dJUUQ5Rjk3VEwwTE42VVdWQU05TjM1RC4u" target="_blank">
+        <button class="prova">Prova 2 - Módulo I</button>
+      </a>
+      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H0tnWC4SC0-Yn6Hh2BkUAh9G4kWUbUJFtr9Ag8Xa3P5UQ1dJUUQ5Rjk3VEwwTE42VVdWQU05TjM1RC4u" target="_blank">
+        <button class="prova">Prova 3 - Módulo II</button>
+      </a><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=H0tnWC4SC0-Yn6Hh2BkUAh9G4kWUbUJFtr9Ag8Xa3P5UQ1dJUUQ5Rjk3VEwwTE42VVdWQU05TjM1RC4u" target="_blank">
+        <button class="prova">Prova 4 - Módulo III</button>
+      </a>
+        
+        <h2>EXERCÍCIOS</h2>
+        <h3>Acesse seus exercicíos de cada aula aqui!</h3>
 
-  <button onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
-    Prova 2 - Módulo B
-  </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios 
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios 
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios 
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios
+        </button><button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios 
+        </button>
+        <button class="exe" onclick="mostrarProva('https://forms.office.com/Pages/ResponsePage.aspx?id=NOVO-LINK-DA-PROVA-2&embed=true')">
+            Exercícios
+        </button>
 
-  <iframe id="formFrame"></iframe>
+      <iframe id="formFrame"></iframe>
+  
 
   <footer class="footer">
     <div class="footer-col">
@@ -140,6 +320,14 @@
 </footer>
 
   <script>
+    const btn = document.getElementById('menu-btn')
+    const menu = document.querySelector('.menu-lateral')
+
+    btn.addEventListener( 'click', () => {
+        menu.classList.toggle('ativo');
+    });
+
+
     function mostrarProva(link) {
       const iframe = document.getElementById("formFrame");
       iframe.src = link;
