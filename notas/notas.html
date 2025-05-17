@@ -5,14 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas</title>
     <link rel="shortcut icon" href="imagem/favicon-16x16.png" type="image/x-icon">
-    <style>
-        body {
-            background-color: rgba(1, 76, 151, 0.907);;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HISTÓRICO DE NOTAS</h1>
-    <p>Acesse suas notas através do seu login de aluno</p>
+  <h1>HISTÓRICO DE NOTAS</h1>
+    <h2>Notas do Aluno</h2>
+    <div id="boasVindas"></div>
+    <table id="tabelaNotas">
+      <thead>
+        <tr>
+          <th>Módulos</th>
+          <th>Disciplina</th>
+          <th>Nota</th>
+      </tr>
+      <tr>
+          <td>Principios Cristãos</td>
+          <td>Plano de Salvaçao, As promessas de Deus, Fé, Amor, Graça, Perdão</td>
+          <td>10.0</td>
+      </tr>
+      <tr>
+          <td>Visão Bíblica</td>
+          <td>Velho Testamento</td>
+          <td>10.0</td>
+      </tr>
+      <tr>
+          <td>Visão Bíblica</td>
+          <td>Novo Testamento</td>
+          <td>10.0</td>
+      </tr>
+      <tr>
+          <td>O Líder na Visão Celular</td>
+          <td>Compreendendo a Visão Celular, lutando pelo consolidar, preparando-se para o enviar</td>
+          <td>10.0</td>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="logout()">Sair</button>
+    
+
+        
+
+    <!-- TABELA DE NOTAS
+    <div id="notas" style="display: block;">
+        <h2>Suas notas</h2>
+        
+        <table>
+            <thead>
+                
+            </thead>
+            <tbody id="tabela-notas">
+              Preenchida via Javascript -->
+            <!-- </tbody>
+        </table>
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="script.js"></script> -->
+
+    <script>
+        const user = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+      
+        if (!user) {
+          alert("Você precisa estar logado para ver as notas!");
+          window.location.href = "login.html";
+        } else {
+          document.getElementById("boasVindas").innerText = `Aluno(a), ${user.nome}!`;
+      
+          // // Simulando notas
+          // const notas = [
+          //   { materia: "MÓDULO I", nota: 10.0 },
+          //   { materia: "MÓDULO II", nota: 10.0 },
+          //   { materia: "MÓDULO III", nota: 9.0 },
+          // ];
+      
+          const tbody = document.querySelector("#tabelaNotas tbody");
+          notas.forEach(n => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>${n.materia}</td><td>${n.nota}</td>`;
+            tbody.appendChild(tr);
+          });
+        }
+      
+        function logout() {
+          sessionStorage.removeItem("usuarioLogado");
+          window.location.href = "login.html";
+        }
+
+        function logout() {
+  // Remove os dados de login
+  localStorage.removeItem("usuarioLogado");
+
+  // Redireciona para a tela de login
+  window.location.href = "../cadastro-login/login.html";
+}
+
+      </script>
+      
 </body>
 </html>
