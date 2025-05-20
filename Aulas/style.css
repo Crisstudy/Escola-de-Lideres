@@ -209,6 +209,34 @@ main {
     left: 5px;
   }
 
+  main {
+    margin: 40px;
+  }
+
+  .menu-lateral {
+    position: fixed;
+    width: 70%;
+    max-width: 250px;
+    height: 100%;
+    top: 0;
+    left: -260px;
+    margin-top: 0;
+    padding: 20px;
+    border-radius: 0;
+    z-index: 1000;
+  }
+
+  .menu-lateral.ativo {
+    left: 0;
+  }
+
+  #menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+  }
+
     .modulo {
         padding: 15px;
         margin-bottom: 30px;
@@ -221,10 +249,14 @@ main {
 }
 
 @media (max-width: 480px) {
-  .menu-lateral {
+.modulo {
+  margin: 40px;
+}
+
+  /* .menu-lateral {
     width: 100%;
     left: -100%;
-  }
+  } */
 
   .menu-lateral.ativo {
     left: 0;

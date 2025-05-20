@@ -178,10 +178,34 @@ h1, h2 {
 
 /* Estilos para telas menores */
 @media (max-width: 768px) {
-  #menu-btn {
+  /* #menu-btn {
   font-size: 1.5rem;
   top: 5px;
   left: 5px;
+} */
+
+.menu-lateral {
+  position: fixed;
+  width: 70%;
+  max-width: 250px;
+  height: 100%;
+  top: 0;
+  left: -260px;
+  margin-top: 0;
+  padding: 20px;
+  border-radius: 0;
+  z-index: 1000;
+}
+
+.menu-lateral.ativo {
+  left: 0;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
 }
 
 button.prova,
