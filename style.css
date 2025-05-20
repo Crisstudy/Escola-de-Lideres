@@ -16,13 +16,10 @@ header {
     height: 90vh;
     padding-top: 50px;
 }
-header img {
-
-}
 
 .container {
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 #menu-btn {

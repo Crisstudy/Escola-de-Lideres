@@ -71,7 +71,7 @@ body {
         color: white;
         font-family: 'Times New Roman', Times, serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin: 10px;
+        margin: 40px;
         padding: 20px;
         max-width: 90%;
         border-radius: 10px;
@@ -246,10 +246,10 @@ body {
 }
 
 @media (max-width: 480px) {
-  .menu-lateral {
+  /* .menu-lateral {
     width: 100%;
     left: -100%;
-  }
+  } */
 
   .menu-lateral.ativo {
     left: 0;
