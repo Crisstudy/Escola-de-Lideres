@@ -178,22 +178,18 @@ h1, h2 {
 
 /* Estilos para telas menores */
 @media (max-width: 768px) {
-  /* #menu-btn {
-  font-size: 1.5rem;
-  top: 5px;
-  left: 5px;
-} */
 
 .menu-lateral {
   position: fixed;
   width: 70%;
   max-width: 250px;
   height: 100%;
-  top: 0;
+  top: 0; 
+  gap: 120px;
   left: -260px;
-  margin-top: 0;
+  margin-top: 50px;
   padding: 20px;
-  border-radius: 0;
+  border-radius: 5px;
   z-index: 1000;
 }
 
@@ -203,8 +199,8 @@ h1, h2 {
 
 #menu-btn {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
   font-size: 1.5rem;
 }
 

@@ -214,15 +214,19 @@ main {
   }
 
   .menu-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
     width: 70%;
     max-width: 250px;
     height: 100%;
-    top: 0;
+    gap: 120px;
+    top: 50px;
     left: -260px;
     margin-top: 0;
     padding: 20px;
-    border-radius: 0;
+    border-radius: 5px;
     z-index: 1000;
   }
 

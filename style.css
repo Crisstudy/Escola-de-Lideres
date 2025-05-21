@@ -43,7 +43,7 @@ header {
     left: -220px;
     width: 200px;
     height: 100vh;
-    gap: 80px;
+    gap: 120px;
     transition: left 0.3s ease;
     z-index: 1000;
     background-color: white;
@@ -224,12 +224,12 @@ header {
       width: 70%;
       max-width: 250px;
       height: 100%;
-      top: 0;
+      top: 0; 
       left: -260px;
-      margin-top: 0;
+      margin-top: 50px;
       padding: 20px;
-      border-radius: 0;
-      z-index: 1000;
+      border-radius: 5px;
+      z-index: 1000; 
     }
 
     .menu-lateral.ativo {
