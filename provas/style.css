@@ -22,7 +22,7 @@ body {
   transition: left 0.3s ease;
   z-index: 1000;
   background-color: white;
-  gap: 80px;
+  gap: 120px;
   border-radius: 8px;
 } 
 
@@ -182,11 +182,11 @@ h1, h2 {
 .menu-lateral {
   position: fixed;
   width: 70%;
-  max-width: 250px;
+  max-width: 240px;
   height: 100%;
   top: 0; 
   gap: 120px;
-  left: -260px;
+  left: -220px;
   margin-top: 50px;
   padding: 20px;
   border-radius: 5px;
